@@ -5,63 +5,63 @@
 
 
 # Basic data types in Python: Numbers, Strings, Booleans, Sequences, Dictionaries
-myint = 5
-myfloat = 13.2
-mystr = "This is a string"
-mybool = True
-mylist = [0, 1, "two", 3.2, False]
-mytuple = (0, 1, 2)
-mydict = {"one" : 1, "two" : 2}
+my_int = 5
+my_float = 13.2
+my_str = "This is a string"
+my_bool = True
+my_list = [0, 1, "two", 3.2, False]
+my_tuple = (0, 1, 2)
+my_dict = {"one" : 1, "two" : 2}
 
-print(myint)
-print(myfloat)
-print(mystr)
-print(mybool)
-print(mylist)
-print(mytuple)
-print(mydict)
+print(my_int)
+print(my_float)
+print(my_str)
+print(my_bool)
+print(my_list)
+print(my_tuple)
+print(my_dict)
 
 # re-declaring a variable works
 
-myint = "abc"
-print(myint)
+my_int = "abc"
+print(my_int)
 
 # to access a member of a sequence type, use []
 
-print(mylist[0], mytuple[2])
+print(my_list[0], my_tuple[2])
 
 # use slices to get parts of a sequence
 
-print(mylist[1:5]) 
-print(mylist[1:5:2]) # skip every second item 2 is the step value.
+print(my_list[1:5]) 
+print(my_list[1:5:2]) # skip every second item 2 is the step value.
 
 # you can use slices to reverse a sequence
-print(mylist[::-1])
+print(my_list[::-1])
 
 # dictionaries are accessed via keys
-print(mydict["one"])
+print(my_dict["one"])
 
 # ERROR: variables of different types cannot be combined
 print(str(5) + "hello world")
 
 # Global vs. local variables in functions
 def someFunction():
-    myint2 = 24 # local variable
-    print(myint2)
+    my_int2 = 24 # local variable
+    print(my_int2)
 
 someFunction() # 24
 #undefined
-# print(myint2)
+# print(my_int2)
 
 def someOtherFunction():
-    global mystr # declare as global variable
-    mystr = "def" # change value of global variable
-    print(mystr)
+    global my_str # declare as global variable
+    my_str = "def" # change value of global variable
+    print(my_str)
 
 someOtherFunction()
-print(mystr) 
+print(my_str) 
 
 
-del mystr # delete a variable
-print(mystr) #undefined
+del my_str # delete a variable
+print(my_str) #undefined
 

@@ -16,33 +16,33 @@ class Vehicle():
         self.speed = speed
 
 class Car(Vehicle):
-    def __init__(self, enginetype):
+    def __init__(self, engine_type):
         super().__init__("Car")
         self.wheels = 4
         self.doors = 4
-        self.enginetype = enginetype
+        self.engine_type = engine_type
     
     def drive(self, speed):
         super().drive(speed)
-        print("Driving my", self.enginetype, "car at", self.speed, "mph.") if self.speed > 0 else print("I have parked my car.")
+        print("Driving my", self.engine_type, "car at", self.speed, "mph.") if self.speed > 0 else print("I have parked my car.")
 
-class Motorcycle(Vehicle):
-    def __init__(self, enginetype, hassidecar):
-        super().__init__("Motorcycle")
-        if(hassidecar):
+class MotorCycle(Vehicle):
+    def __init__(self, engine_type, has_side_car):
+        super().__init__("MotorCycle")
+        if(has_side_car):
             self.wheels = 3
         else:
             self.wheels = 2
         self.doors = 0
-        self.enginetype = enginetype
+        self.engine_type = engine_type
     
     def drive(self, speed):
         super().drive(speed)
-        print("Driving my", self.enginetype, "motorcycle at", self.speed, "mph.") if self.speed > 0 else print("I have parked my motorcycle.")
+        print("Driving my", self.engine_type, "motorCycle at", self.speed, "mph.") if self.speed > 0 else print("I have parked my motorCycle.")
 
 car1 = Car("gas")
 car2 = Car("electric")
-mc1 = Motorcycle("gas", True)
+mc1 = MotorCycle("gas", True)
 car1.drive(0)
 car2.drive(60)
 mc1.drive(100)
